@@ -16,11 +16,11 @@ export default function Process() {
           </p>
         </Reveal>
 
-        <div className="mt-[54px] grid grid-cols-1 items-start gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-[54px] grid grid-cols-1 items-stretch gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((st, i) => (
-            <Reveal key={st.num} y={34} duration={0.7} delay={i * 0.12} className="relative">
+            <Reveal key={st.num} y={34} duration={0.7} delay={i * 0.12} className="relative h-full">
               <div
-                className="relative rounded-3xl px-[22px] py-[26px] text-center"
+                className="relative h-full rounded-3xl px-[22px] py-[26px] text-center"
                 style={{ background: st.bg, boxShadow: "0 10px 26px rgba(122,63,8,.08)" }}
               >
                 <div
