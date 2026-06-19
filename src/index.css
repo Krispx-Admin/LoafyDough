@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pink: #fbccee;
+  --cinnamon: #c37012;
+  --mauve: #9f6162;
+  --cream: #fff8f0;
+  --cocoa: #3a2417;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--cocoa);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--pink);
+  color: #7a3f08;
+}
+
+/* ------------------------ Signature keyframes ------------------------- */
+@keyframes rollup {
+  0% {
+    transform: rotate(-320deg) scale(0.45);
+  }
+  62% {
+    transform: rotate(0deg) scale(1);
+  }
+  76% {
+    transform: rotate(0deg) scale(1.14);
+  }
+  88% {
+    transform: rotate(0deg) scale(0.96);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+@keyframes draw {
+  from {
+    stroke-dashoffset: 966;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-18px) rotate(var(--r, 0deg));
+  }
+}
+@keyframes spinslow {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulsering {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--cinnamon);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ------------------------ Reduced motion ------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+  .loader-path {
+    stroke-dashoffset: 0 !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

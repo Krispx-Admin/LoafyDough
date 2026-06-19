@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"c:/Users/omara/Desktop/Website Building/Loafydough website/Website code\" 2>/dev/null; echo \"---\"; ls -la \"c:/Users/omara/Desktop/Website Building/Loafydough website\" 2>/dev/null)",
+      "Read(//c/Users/omara/Desktop/Website Building/Loafydough website/**)",
+      "Bash(seq 1 40)",
+      "Bash(grep -qi Local: C:/Users/omara/AppData/Local/Temp/claude/c--Users-omara-Desktop-Website-Building-Loafydough-website-Website-code/a81a01b3-f54c-42c7-974e-a0c994e92e8e/tasks/b0szhjr3l.output)",
+      "Bash(break)",
+      "Bash(sleep 0.5)",
+      "Bash(cat C:/Users/omara/AppData/Local/Temp/claude/c--Users-omara-Desktop-Website-Building-Loafydough-website-Website-code/a81a01b3-f54c-42c7-974e-a0c994e92e8e/tasks/b0szhjr3l.output)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\omara\\\\Desktop\\\\Website Building\\\\Loafydough website\\\\Images\" | Select-Object Name, @{n='KB';e={[int]\\($_.Length/1KB\\)}}, LastWriteTime | Format-Table -AutoSize)"
+    ]
+  }
+}
